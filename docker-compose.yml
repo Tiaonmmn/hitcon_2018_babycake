@@ -1,0 +1,6 @@
+version: "2"
+services:
+  babycake:
+    build: .
+    ports:
+      - "127.0.0.1:2365:80"
