@@ -1,8 +1,7 @@
-FROM ubuntu:latest 
+FROM ubuntu:latest
 # CakePHP need PHP7.2
 LABEL Author="orange"
-RUN echo "flag{bc9d24fc-1fd4-11e9-96d9-03295f6e31fc}" > /flag
-COPY var/www/html/ /var/www/html/
+COPY files/app/ var/www/html/
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone 
 # Make tzdata install noninteractive
